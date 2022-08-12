@@ -14,7 +14,7 @@
     "build:cjs": "tsc index.ts --declaration --outDir lib",
     "build:esm": "tsc index.ts --target es6 --declaration --outDir lib",
     "build": "npm run build:esm && mv lib/index.js lib/index.esm.js && npm run build:cjs",
-    "prepack": "npm run build"
+    "prepack": "tsc index.ts --target es6 --declaration --outDir lib"
   },
   "repository": {
     "type": "git",
